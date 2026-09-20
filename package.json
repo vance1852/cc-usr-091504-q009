@@ -1,0 +1,28 @@
+{
+  "name": "individual-support-service",
+  "version": "1.0.0",
+  "description": "课后活动个别支持措施服务:授权转化、最小可见分发、版本与重新评估",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --experimental-sqlite dist/main.js",
+    "dev": "tsc -p tsconfig.json && node --experimental-sqlite dist/main.js",
+    "test:scenario": "tsc -p tsconfig.json && DB_PATH=:memory: node --experimental-sqlite dist/test/scenario.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "bcryptjs": "^3.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
